@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Project đổi số điện thoại</title>
+</head>
+<body>
+	<h1>Mời bạn nhập vào số điện thoại:</h1>
+	<form name="myf">
+		Số điện thoại: <input type="text" name="text" id="phone" maxlength="11">
+		<br>
+		Chọn nhà mạng: 
+		<br>
+		Viettel <input type="radio" name="nm" value="Viettel">
+		<br>
+		MobiePhone <input type="radio" name="nm" value="MobiePhone">
+		<br>
+		VinaPhone <input type="radio" name="nm" value="VinaPhone">
+		<br>
+		VietnamMobie <input type="radio" name="nm" value="VietnamMobie">
+		<br>
+		Gmobie <input type="radio" name="nm" value="Gmobie">
+		<br>
+		<input type="button" name="text" value="submit" onclick="ChangePhone()">
+	</form>
+	<h1>Số điện thoại sau khi đã chuyển đổi</h1>
+	<div id="show">
+			
+	</div>
+	<script type="text/javascript">
+		function ChangePhone() {
+			var string = document.getElementById('phone').value;
+			console.log(string);
+			var start = string.substring(0, 4);
+			var end = string.substring(4, 11);
+			var nhamang = document.myf.nm.value;
+			if(nhamang == "Viettel"){
+				switch(start){
+					case "0162":
+						document.getElementById('show').innerHTML = "Số điện thoại mới: " + " 032" + end;
+						break;
+					case "0163":
+						document.getElementById('show').innerHTML = "Số điện thoại mới: " + " 033" + end;
+						break;
+					case "0164":
+						document.getElementById('show').innerHTML = "Số điện thoại mới: " + " 034" + end;
+						break;
+					case "0165":
+						document.getElementById('show').innerHTML = "Số điện thoại mới: " + " 035" + end;
+						break;
+					case "0166":
+						document.getElementById('show').innerHTML = "Số điện thoại mới: " + " 036" + end;
+						break;	
+					case "0167":
+						document.getElementById('show').innerHTML = "Số điện thoại mới: " + " 037" + end;
+						break;
+					case "0168":
+						document.getElementById('show').innerHTML = "Số điện thoại mới: " + " 038" + end;
+						break;
+					case "0169":
+						document.getElementById('show').innerHTML = "Số điện thoại mới: " + " 039" + end;
+						break;
+					default:
+						document.getElementById("show").innerHTML = "Nhà mạng không hợp lệ!";
+						break;
+				}
+			}
+			else if(nhamang == "MobiePhone")
+			{
+				switch(start){
+					case "0120":
+						document.getElementById('show').innerHTML = "Số điện thoại mới: " + " 070" + end;
+						break;
+					case "0121":
+						document.getElementById('show').innerHTML = "Số điện thoại mới: " + " 079" + end;
+						break;
+					case "0122":
+						document.getElementById('show').innerHTML = "Số điện thoại mới: " + " 077" + end;
+						break;
+					case "0126":
+						document.getElementById('show').innerHTML = "Số điện thoại mới: " + " 076" + end;
+						break;
+					case "0128":
+						document.getElementById('show').innerHTML = "Số điện thoại mới: " + " 078" + end;
+						break;	
+					default:
+						document.getElementById("show").innerHTML = "Nhà mạng không hợp lệ!";
+						break;
+				}
+			}
+			else if(nhamang == "VinaPhone")
+			{
+				switch(start){
+					case "0123":
+						document.getElementById('show').innerHTML = "Số điện thoại mới: " + " 083" + end;
+						break;
+					case "0124":
+						document.getElementById('show').innerHTML = "Số điện thoại mới: " + " 084" + end;
+						break;
+					case "0125":
+						document.getElementById('show').innerHTML = "Số điện thoại mới: " + " 085" + end;
+						break;
+					case "0127":
+						document.getElementById('show').innerHTML = "Số điện thoại mới: " + " 081" + end;
+						break;
+					case "0129":
+						document.getElementById('show').innerHTML = "Số điện thoại mới: " + " 082" + end;
+						break;	
+					default:
+						document.getElementById("show").innerHTML = "Nhà mạng không hợp lệ!";
+						break;
+				}
+			}
+			else if(nhamang == "VietnamMobie")
+			{
+				switch(start){
+					case "0186":
+						document.getElementById('show').innerHTML = "Số điện thoại mới: " + " 056" + end;
+						break;
+					case "0188":
+						document.getElementById('show').innerHTML = "Số điện thoại mới: " + " 058" + end;
+						break;
+					default:
+						document.getElementById("show").innerHTML = "Nhà mạng không hợp lệ!";
+						break;
+				}
+			}
+			else if(nhamang == "Gmobie")
+			{
+				switch(start){
+					case "0199":
+						document.getElementById('show').innerHTML = "Số điện thoại mới: " + " 059" + end;
+						break;
+					default:
+						document.getElementById("show").innerHTML = "Nhà mạng không hợp lệ!";
+						break;
+				}
+			}
+			else
+			{
+				document.getElementById('show').innerHTML = "Chưa chọn nhà mạng!";
+			}
+		}
+	</script>
+</body>
+</html>
